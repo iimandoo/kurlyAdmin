@@ -1,4 +1,4 @@
-# Kurly clone project
+# KurlyAdmin clone project
 
 ## 사용기술
 
@@ -6,6 +6,6 @@
 - React-Router
 - React-Query
 - Typescript
-- Tailwindcss
+- MaterialUI
 - Firebase
 - Cloudinary
