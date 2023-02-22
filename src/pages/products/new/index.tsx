@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
+import { Button, Typography } from '@mui/material';
+import { useProductsCreateUpdateMutation } from 'api/products/create/useProductsCreateUpdateMethodMutation';
 import ProductsNewFormCreate from 'components/products/new/form/create';
 import ProductsNewFormImgUploader from 'components/products/new/form/ImgUploader';
 import { ProductsCreateForm } from 'models/products/ProductsCreateForm';
 import FixedCenterWrapper from 'components/common/FixedCenterWrapper';
-import { useProductsCreateUpdateMutation } from 'api/products/create/useProductsCreateUpdateMethodMutation';
 import Dialog from 'components/common/Dialog';
-import { Button } from '@mui/material';
 import PageWrapper from 'components/common/PageWrapper';
 import PageHead from 'components/common/PageHead';
 
@@ -36,7 +36,11 @@ const ProductsNewPage = () => {
 
   return (
     <PageWrapper>
-      <PageHead>상품 등록</PageHead>
+      <PageHead>
+        <Typography variant='h1' style={{ paddingBottom: '2rem' }}>
+          상품등록
+        </Typography>
+      </PageHead>
 
       <ProductsNewFormImgUploader onUploaded={onUploaded}></ProductsNewFormImgUploader>
 

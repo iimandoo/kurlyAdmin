@@ -1,26 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { Box } from '@mui/material';
-import { Typography } from '@mui/material';
-import HeadPageWrapper from 'components/common/PageWrapper';
+import { Button, Typography } from '@mui/material';
+import PageWrapper from 'components/common/PageWrapper';
+import PageHead from 'components/common/PageHead';
+import ProductsList from 'components/products/List';
 
 const ProductsListPage = () => {
   return (
-    <HeadPageWrapper>
-      <Box display='flex' flexDirection='row'>
-        <Typography variant='h1'>상품 리스트</Typography>
-        <Link to='/products/new'>상품등록</Link>
-      </Box>
-      <Box>
-        <table>
-          <thead>
-            <tr>
-              <th>번호</th>
-            </tr>
-          </thead>
-        </table>
-      </Box>
-    </HeadPageWrapper>
+    <PageWrapper>
+      <PageHead>
+        <Typography variant='h1' style={{ paddingBottom: '2rem' }}>
+          상품리스트
+        </Typography>
+
+        <Button variant='contained' href='/products/new'>
+          상품등록
+        </Button>
+      </PageHead>
+
+      <ProductsList></ProductsList>
+    </PageWrapper>
   );
 };
 

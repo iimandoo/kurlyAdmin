@@ -14,7 +14,7 @@ const AppRouter: React.FC = () => {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<ContainerPage />}>
-          <Route index element={<ProductsNewPage />} />
+          <Route index element={<ProductsListPage />} />
           <Route path='/banners/list' element={<BannersListPage />} />
           <Route path='/banners/display' element={<BannersDisplayPage />} />
           <Route path='/products/list' element={<ProductsListPage />} />
