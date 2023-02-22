@@ -3,7 +3,7 @@ import { Box } from '@mui/material';
 
 type Props = { children: ReactNode };
 
-const AdminFixedCenterWrapper = ({ children }: Props) => {
+const FixedCenterWrapper = ({ children }: Props) => {
   return (
     <Box display='flex' justifyContent={'center'} padding={5} gap={4}>
       {children}
@@ -11,4 +11,4 @@ const AdminFixedCenterWrapper = ({ children }: Props) => {
   );
 };
 
-export default AdminFixedCenterWrapper;
+export default FixedCenterWrapper;

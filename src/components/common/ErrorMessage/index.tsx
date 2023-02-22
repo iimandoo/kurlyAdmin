@@ -1,9 +1,14 @@
 import React from 'react';
+import Typography from '@mui/material/Typography';
 
 type Props = { message?: string };
 
-const AdminErrorMessage = (props: Props) => {
-  return <div className='text-red-500 text-sm mt-2'>{props.message}</div>;
+const ErrorMessage = (props: Props) => {
+  return (
+    <Typography variant='subtitle1' color='error'>
+      {props.message}
+    </Typography>
+  );
 };
 
-export default AdminErrorMessage;
+export default ErrorMessage;

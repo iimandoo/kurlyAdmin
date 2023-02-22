@@ -14,8 +14,10 @@ body {
 .font-brand {
   font-family: 'Pacifico';
 }
+
 .logo {
   font-size: x-large;
   font-weight: 700;
   color: rgb(133, 3, 189);
+  text-decoration: none;
 }

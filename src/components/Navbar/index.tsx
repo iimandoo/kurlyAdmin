@@ -25,7 +25,7 @@ const Navbar = () => {
         <List>
           <ListItem disablePadding>
             <ListItemButton href='/products/list'>
-              <ListItemText primary='상품' />
+              <ListItemText primary='상품' sx={{ fontWeight: 700, fontSize: '2rem' }} />
             </ListItemButton>
           </ListItem>
         </List>

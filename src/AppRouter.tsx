@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import NotFoundPage from 'pages/NotFound';
+import NotFoundPage from 'pages/not-found';
 import ContainerPage from 'pages';
 import BannersListPage from 'pages/banners/list';
 import BannersDisplayPage from 'pages/banners/display';

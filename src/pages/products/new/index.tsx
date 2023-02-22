@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
-import ProductsNewFormCreate from 'components/products/New/Form/create';
-import ProductsNewFormImgUploader from 'components/products/New/Form/imgUploader';
+import ProductsNewFormCreate from 'components/products/new/form/create';
+import ProductsNewFormImgUploader from 'components/products/new/form/ImgUploader';
 import { ProductsCreateForm } from 'models/products/ProductsCreateForm';
 import FixedCenterWrapper from 'components/common/FixedCenterWrapper';
 import { useProductsCreateUpdateMutation } from 'api/products/create/useProductsCreateUpdateMethodMutation';

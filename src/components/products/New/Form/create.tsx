@@ -8,13 +8,13 @@ import TableRow from '@mui/material/TableRow';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
 import { StyledTableCell } from 'theme';
-import AdminErrorMessage from 'components/common/ErrorMessage';
+import ErrorMessage from 'components/common/ErrorMessage';
 
 type Props = {
   uploadedUrl: string;
 };
 
-const AdminProductsNewFormCreate = (props: Props) => {
+const ProductsNewFormCreate = (props: Props) => {
   const {
     register,
     control,
@@ -74,7 +74,7 @@ const AdminProductsNewFormCreate = (props: Props) => {
               </StyledTableCell>
               <TableCell>
                 <TextField {...titleField} fullWidth />
-                {errors.title && <AdminErrorMessage message={errors.title?.message?.toString()} />}
+                {errors.title && <ErrorMessage message={errors.title?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -83,7 +83,7 @@ const AdminProductsNewFormCreate = (props: Props) => {
               </StyledTableCell>
               <TableCell>
                 <TextField {...descriptionField} fullWidth />
-                {errors.description && <AdminErrorMessage message={errors.description?.message?.toString()} />}
+                {errors.description && <ErrorMessage message={errors.description?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -95,7 +95,7 @@ const AdminProductsNewFormCreate = (props: Props) => {
                   옵션명=가격 형태로 입력하세요. <br />, 로 구분합니다.'
                 </p>
                 <TextField label='옵션 예) sm=1000, xl=2000' {...optionsField} fullWidth />
-                {errors.options && <AdminErrorMessage message={errors.options?.message?.toString()} />}
+                {errors.options && <ErrorMessage message={errors.options?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -106,7 +106,7 @@ const AdminProductsNewFormCreate = (props: Props) => {
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <TextField {...deliveryPriceField} /> 원
                 </div>
-                {errors.deliveryPrice && <AdminErrorMessage message={errors.deliveryPrice?.message?.toString()} />}
+                {errors.deliveryPrice && <ErrorMessage message={errors.deliveryPrice?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
@@ -115,7 +115,7 @@ const AdminProductsNewFormCreate = (props: Props) => {
               </StyledTableCell>
               <TableCell>
                 <TextField {...contentField} fullWidth multiline />
-                {errors.content && <AdminErrorMessage message={errors.content?.message?.toString()} />}
+                {errors.content && <ErrorMessage message={errors.content?.message?.toString()} />}
               </TableCell>
             </TableRow>
           </TableBody>
@@ -125,4 +125,4 @@ const AdminProductsNewFormCreate = (props: Props) => {
   );
 };
 
-export default AdminProductsNewFormCreate;
+export default ProductsNewFormCreate;

@@ -1,4 +1,4 @@
 import { useMutation } from '@tanstack/react-query';
-import { ProductsCreateUpdateMehtod } from './productsCreateUpdateMethodApi';
+import { ProductsCreateUpdateMehtod } from './ProductsCreateUpdateMethodApi';
 
 export const useProductsCreateUpdateMutation = () => useMutation(ProductsCreateUpdateMehtod);

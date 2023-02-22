@@ -5,7 +5,7 @@ type Props = {
   onUploaded: (uploadedUrl: string) => void;
 };
 
-const AdminImageUploader = (props: Props) => {
+const ImageUploader = (props: Props) => {
   const [uploadImage, setUploadImage] = useState<Blob>();
   const [isUploadDone, setIsUploadDone] = useState<boolean>(true);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -59,4 +59,4 @@ const AdminImageUploader = (props: Props) => {
   );
 };
 
-export default AdminImageUploader;
+export default ImageUploader;

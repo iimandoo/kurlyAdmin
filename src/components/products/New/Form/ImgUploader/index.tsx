@@ -12,7 +12,7 @@ type Props = {
   onUploaded: (uploadedUrl: string) => void;
 };
 
-const AdminProductsNewFormImgUploader = (props: Props) => {
+const ProductsNewFormImgUploader = (props: Props) => {
   const [uploadedUrl, setUploadedUrl] = useState('');
 
   const onUploaded = (uploadedUrl: string) => {
@@ -45,4 +45,4 @@ const AdminProductsNewFormImgUploader = (props: Props) => {
   );
 };
 
-export default AdminProductsNewFormImgUploader;
+export default ProductsNewFormImgUploader;
