@@ -7,7 +7,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import TextField from '@mui/material/TextField';
 import Paper from '@mui/material/Paper';
-import { StyledTableCell } from 'theme';
+import { TableThCell } from 'theme';
 import ErrorMessage from 'components/common/ErrorMessage';
 
 type Props = {
@@ -69,27 +69,27 @@ const ProductsNewFormCreate = (props: Props) => {
         <Table aria-label='상품등록테이블'>
           <TableBody>
             <TableRow>
-              <StyledTableCell component='th' scope='row' width={200}>
+              <TableThCell component='th' scope='row' width={200}>
                 상품명
-              </StyledTableCell>
+              </TableThCell>
               <TableCell>
                 <TextField {...titleField} fullWidth />
                 {errors.title && <ErrorMessage message={errors.title?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
-              <StyledTableCell component='th' scope='row'>
+              <TableThCell component='th' scope='row'>
                 설명
-              </StyledTableCell>
+              </TableThCell>
               <TableCell>
                 <TextField {...descriptionField} fullWidth />
                 {errors.description && <ErrorMessage message={errors.description?.message?.toString()} />}
               </TableCell>
             </TableRow>
             <TableRow>
-              <StyledTableCell component='th' scope='row'>
+              <TableThCell component='th' scope='row'>
                 옵션
-              </StyledTableCell>
+              </TableThCell>
               <TableCell>
                 <p className='text-sm mb-2'>
                   옵션명=가격 형태로 입력하세요. <br />, 로 구분합니다.'
@@ -99,9 +99,9 @@ const ProductsNewFormCreate = (props: Props) => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <StyledTableCell component='th' scope='row'>
+              <TableThCell component='th' scope='row'>
                 배송비
-              </StyledTableCell>
+              </TableThCell>
               <TableCell>
                 <div style={{ display: 'flex', alignItems: 'center' }}>
                   <TextField {...deliveryPriceField} /> 원
@@ -110,9 +110,9 @@ const ProductsNewFormCreate = (props: Props) => {
               </TableCell>
             </TableRow>
             <TableRow>
-              <StyledTableCell component='th' scope='row'>
+              <TableThCell component='th' scope='row'>
                 상세
-              </StyledTableCell>
+              </TableThCell>
               <TableCell>
                 <TextField {...contentField} fullWidth multiline />
                 {errors.content && <ErrorMessage message={errors.content?.message?.toString()} />}

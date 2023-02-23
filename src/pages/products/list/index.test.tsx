@@ -47,3 +47,8 @@ test('상품리스트 > 리스트 > 헤더 > 상세', () => {
   render(<ProductsListPage />, { wrapper: BrowserRouter });
   expect(screen.getByText(/상세/i)).toBeInTheDocument();
 });
+
+test('상품리스트 > 리스트 > 헤더 > 상세', () => {
+  render(<ProductsListPage />, { wrapper: BrowserRouter });
+  expect(screen.getByText(/상세/i)).toBeInTheDocument();
+});

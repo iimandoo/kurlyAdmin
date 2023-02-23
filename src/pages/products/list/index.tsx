@@ -8,9 +8,7 @@ const ProductsListPage = () => {
   return (
     <PageWrapper>
       <PageHead>
-        <Typography variant='h1' style={{ paddingBottom: '2rem' }}>
-          상품리스트
-        </Typography>
+        <Typography variant='h1'>상품리스트</Typography>
 
         <Button variant='contained' href='/products/new'>
           상품등록

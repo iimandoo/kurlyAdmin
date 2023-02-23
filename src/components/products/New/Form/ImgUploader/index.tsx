@@ -5,7 +5,7 @@ import TableCell from '@mui/material/TableCell';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import { StyledTableCell } from 'theme';
+import { TableThCell } from 'theme';
 import AdminImageUploader from 'components/common/ImageUploader';
 
 type Props = {
@@ -25,9 +25,9 @@ const ProductsNewFormImgUploader = (props: Props) => {
       <Table aria-label='이미지 업로드' style={{ minWidth: '600px' }}>
         <TableBody>
           <TableRow>
-            <StyledTableCell component='th' scope='row' width={200}>
+            <TableThCell component='th' scope='row' width={200}>
               대표 이미지
-            </StyledTableCell>
+            </TableThCell>
             <TableCell>
               <AdminImageUploader onUploaded={onUploaded} />
               {uploadedUrl && (

@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material/styles';
 import { styled } from '@mui/material/styles';
-import TableCell, { tableCellClasses } from '@mui/material/TableCell';
+import TableCell from '@mui/material/TableCell';
 
 const theme = createTheme({
   palette: {
@@ -60,12 +60,10 @@ const theme = createTheme({
   },
 });
 
-export const StyledTableCell = styled(TableCell)(({ theme }) => ({
-  [`&.${tableCellClasses.body}`]: {
-    backgroundColor: theme.palette.grey[200],
-    fontSize: 16,
-    fontWeight: 700,
-  },
+export const TableThCell = styled(TableCell)(({ theme }) => ({
+  backgroundColor: theme.palette.grey[200],
+  fontSize: 16,
+  fontWeight: 700,
 }));
 
 export default theme;

@@ -37,9 +37,7 @@ const ProductsNewPage = () => {
   return (
     <PageWrapper>
       <PageHead>
-        <Typography variant='h1' style={{ paddingBottom: '2rem' }}>
-          상품등록
-        </Typography>
+        <Typography variant='h1'>상품등록</Typography>
       </PageHead>
 
       <ProductsNewFormImgUploader onUploaded={onUploaded}></ProductsNewFormImgUploader>

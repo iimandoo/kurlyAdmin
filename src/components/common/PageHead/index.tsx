@@ -1,14 +1,12 @@
 import React, { ReactNode } from 'react';
 import { Box } from '@mui/material';
-import { Divider } from '@mui/material';
 
 type Props = { children: ReactNode };
 
 const PageHead = ({ children }: Props) => {
   return (
-    <Box display='flex' flexDirection='row' justifyContent='space-between'>
+    <Box display='flex' flexDirection='row' alignItems='center' justifyContent='space-between' paddingBottom='3rem'>
       {children}
-      <Divider style={{ marginBottom: '3rem' }} />
     </Box>
   );
 };
