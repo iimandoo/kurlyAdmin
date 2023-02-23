@@ -4,9 +4,8 @@ import TableHead from '@mui/material/TableHead';
 import TableContainer from '@mui/material/TableContainer';
 import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
 import Paper from '@mui/material/Paper';
-import { TableThCell } from 'theme';
+import { TableThCell, TableTdBorder } from 'theme';
 import { useProductsListQuery } from 'api/products/list/useProductsListQuery';
 import { QueryDocumentSnapshot } from 'firebase/firestore';
 import { ProductsListModel } from 'models/products/ProductsListModel';
@@ -45,16 +44,14 @@ const ProductsList = () => {
               const item = doc.data();
               return (
                 <TableRow key={`products-${item.id}`}>
-                  <TableCell>
-                    {item.url}
-                    <br />
-                    <img src={item.url} alt={item.title} />
-                  </TableCell>
-                  <TableCell>{item.title}</TableCell>
-                  <TableCell>{item.description}</TableCell>
-                  <TableCell>{item.options}</TableCell>
-                  <TableCell>{item.deliveryPrice}</TableCell>
-                  <TableCell>{item.content}</TableCell>
+                  <TableTdBorder sx={{ width: 1 / 9 }}>
+                    <img src={item.url ?? '/img/noimage.png'} alt={item.title} width='100%' />
+                  </TableTdBorder>
+                  <TableTdBorder>{item.title}</TableTdBorder>
+                  <TableTdBorder>{item.description}</TableTdBorder>
+                  <TableTdBorder>{item.options}</TableTdBorder>
+                  <TableTdBorder>{item.deliveryPrice}</TableTdBorder>
+                  <TableTdBorder>{item.content}</TableTdBorder>
                 </TableRow>
               );
             })}

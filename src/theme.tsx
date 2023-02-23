@@ -66,4 +66,10 @@ export const TableThCell = styled(TableCell)(({ theme }) => ({
   fontWeight: 700,
 }));
 
+export const TableTdBorder = styled(TableCell)(({ theme }) => ({
+  borderColor: theme.palette.grey[300],
+  borderStyle: 'solid',
+  borderWidth: '1px',
+}));
+
 export default theme;
