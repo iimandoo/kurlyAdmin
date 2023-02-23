@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
 import { useProductsCreateUpdateMutation } from 'api/products/create/useProductsCreateUpdateMethodMutation';
 import ProductsNewFormCreate from 'components/products/new/form/create';
@@ -11,6 +12,7 @@ import PageWrapper from 'components/common/PageWrapper';
 import PageHead from 'components/common/PageHead';
 
 const ProductsNewPage = () => {
+  const navigate = useNavigate();
   const [uploadedUrl, setUploadedUrl] = useState('');
   const [dialog, setDialog] = React.useState({ isOpen: false, message: '' });
 
@@ -24,7 +26,8 @@ const ProductsNewPage = () => {
   const onSubmit = async (formData: ProductsCreateForm) => {
     try {
       await mutateAdminProductsCreateUpdate(formData);
-      setDialog({ isOpen: true, message: '등록하였습니다.' });
+      await setDialog({ isOpen: true, message: '등록하였습니다.' });
+      navigate('/products/list');
     } catch (e) {
       setDialog({ isOpen: true, message: '등록에 실패했습니다.' });
     }
