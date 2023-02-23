@@ -49,7 +49,7 @@ const ProductsNewPage = () => {
             <Button variant='contained' size='large' type='submit'>
               등록
             </Button>
-            <Button variant='outlined' size='large'>
+            <Button variant='outlined' size='large' href='/products/list'>
               취소
             </Button>
           </FixedCenterWrapper>
