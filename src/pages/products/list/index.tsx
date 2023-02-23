@@ -3,8 +3,11 @@ import { Button, Typography } from '@mui/material';
 import PageWrapper from 'components/common/PageWrapper';
 import PageHead from 'components/common/PageHead';
 import ProductsList from 'components/products/List';
+import { useProductsListQuery } from 'api/products/list/useProductsListQuery';
 
 const ProductsListPage = () => {
+  const { data } = useProductsListQuery();
+
   return (
     <PageWrapper>
       <PageHead>
@@ -15,7 +18,7 @@ const ProductsListPage = () => {
         </Button>
       </PageHead>
 
-      <ProductsList></ProductsList>
+      <ProductsList data={data}></ProductsList>
     </PageWrapper>
   );
 };

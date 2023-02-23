@@ -6,13 +6,13 @@ import TableRow from '@mui/material/TableRow';
 import TableBody from '@mui/material/TableBody';
 import Paper from '@mui/material/Paper';
 import { TableThCell, TableTdBorder } from 'theme';
-import { useProductsListQuery } from 'api/products/list/useProductsListQuery';
 import { QueryDocumentSnapshot } from 'firebase/firestore';
 import { ProductsListModel } from 'models/products/ProductsListModel';
 
-const ProductsList = () => {
-  const { data } = useProductsListQuery();
-
+type Props = {
+  data?: QueryDocumentSnapshot<ProductsListModel>[];
+};
+const ProductsList = ({ data }: Props) => {
   return (
     <>
       <TableContainer component={Paper}>
