@@ -8,8 +8,22 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Auth from 'components/common/Auth';
+import { useDispatch, useSelector } from 'react-redux';
+import { RootState } from 'store/modules';
+import { logIn, logOut } from 'store/modules/auth';
 
 const Navbar = () => {
+  const displayName = useSelector((state: RootState) => state.auth.displayName);
+  const dispatch = useDispatch();
+
+  const onLogIn = (displayName: string) => {
+    dispatch(logIn(displayName));
+  };
+
+  const onLogOut = (displayName: string) => {
+    dispatch(logOut(displayName));
+  };
+
   return (
     <Box
       display='flex'
@@ -38,7 +52,7 @@ const Navbar = () => {
           <Link to='/member/list'>회원</Link>
          <button>Kurly로 이동</button>  */}
         {/* <button onClick={handleLogIn}>로그인</button> */}
-        <Auth></Auth>
+        <Auth displayName={displayName} onLogIn={onLogIn} onLogOut={onLogOut} />
       </nav>
     </Box>
   );

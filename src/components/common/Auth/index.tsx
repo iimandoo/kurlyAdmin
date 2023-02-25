@@ -1,36 +1,40 @@
 import * as React from 'react';
-import { GoogleAuthProvider, signInWithPopup, UserCredential, User, signOut } from 'firebase/auth';
+import { GoogleAuthProvider, signInWithPopup, UserCredential, signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
 import { firebaseAuth } from 'firebaseRoot';
 
-const Auth = () => {
-  const [logInData, setLogInData] = React.useState<User | null>(null);
+type AuthProps = {
+  displayName: string;
+  onLogIn: (displayName: string) => void;
+  onLogOut: (displayName: string) => void;
+};
 
+function Auth({ displayName, onLogIn, onLogOut }: AuthProps) {
   const handleLogIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(firebaseAuth, provider).then((data: UserCredential) => {
-      setLogInData(data.user);
+      data.user.displayName && onLogIn(data.user.displayName);
     });
   };
 
   const handleLogOut = () => {
     signOut(firebaseAuth)
       .then(() => {
-        setLogInData(null);
+        onLogOut('');
       })
       .catch();
   };
   return (
     <>
-      {logInData ? (
+      {displayName ? (
         <>
-          {logInData.displayName} <Button onClick={handleLogOut}>로그아웃</Button>
+          {displayName} <Button onClick={handleLogOut}>로그아웃</Button>
         </>
       ) : (
         <Button onClick={handleLogIn}>login</Button>
       )}
     </>
   );
-};
+}
 
 export default Auth;
