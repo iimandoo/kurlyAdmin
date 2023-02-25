@@ -5,7 +5,7 @@ import LoginPage from 'pages/login';
 import AppRouter from '../AppRouter';
 
 const withAuth = () => {
-  const displayName = useSelector((state: RootState) => state.auth.displayName);
+  const displayName = useSelector((state: RootState) => state.authReducer.displayName);
 
   return <>{displayName ? <AppRouter /> : <LoginPage />}</>;
 };

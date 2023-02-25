@@ -11,12 +11,13 @@ type AuthAction = ReturnType<typeof logIn> | ReturnType<typeof logOut>;
 type USERSTATE = {
   displayName: string;
 };
+
 const initialState: USERSTATE = {
   displayName: '',
 };
 
 //리듀서
-export default function auth(state: USERSTATE = initialState, action: AuthAction) {
+export default function authReducer(state: USERSTATE = initialState, action: AuthAction) {
   switch (action.type) {
     case LOGIN:
     case LOGOUT:
