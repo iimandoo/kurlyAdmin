@@ -9,11 +9,11 @@ import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Auth from 'components/common/Auth';
 import { useDispatch, useSelector } from 'react-redux';
-import { RootState } from 'store/modules';
-import { logOut } from 'store/modules/auth';
+import { RootState } from 'store';
+import { logOut } from 'store/auth/actions';
 
 const Navbar = () => {
-  const displayName = useSelector((state: RootState) => state.auth.displayName);
+  const displayName = useSelector((state: RootState) => state.authReducer.displayName);
   const dispatch = useDispatch();
 
   const handleLogOut = (displayName: string) => {

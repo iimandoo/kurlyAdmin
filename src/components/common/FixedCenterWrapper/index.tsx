@@ -5,7 +5,7 @@ type Props = { children: ReactNode };
 
 const FixedCenterWrapper = ({ children }: Props) => {
   return (
-    <Box display='flex' justifyContent={'center'} padding={5} gap={4}>
+    <Box display='flex' justifyContent='center' padding={5} gap={4}>
       {children}
     </Box>
   );

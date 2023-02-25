@@ -3,12 +3,12 @@ import { signOut } from 'firebase/auth';
 import Button from '@mui/material/Button';
 import { firebaseAuth } from 'firebaseRoot';
 
-type AuthProps = {
+type Props = {
   displayName: string;
   onLogOut: (displayName: string) => void;
 };
 
-function Auth({ displayName, onLogOut }: AuthProps) {
+function Auth({ displayName, onLogOut }: Props) {
   const handleLogOut = () => {
     signOut(firebaseAuth)
       .then(() => {

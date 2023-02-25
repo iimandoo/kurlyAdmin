@@ -7,11 +7,11 @@ import GoogleIcon from '@mui/icons-material/Google';
 import Typography from '@mui/material/Typography';
 import { firebaseAuth } from 'firebaseRoot';
 
-type AuthProps = {
+type Props = {
   onLogIn: (displayName: string) => void;
 };
 
-function LogIn({ onLogIn }: AuthProps) {
+function LogIn({ onLogIn }: Props) {
   const handleLogIn = () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(firebaseAuth, provider).then((data: UserCredential) => {

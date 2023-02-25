@@ -20,7 +20,7 @@
     |   ├── components/             # component directory
     |   ├── models/                 # type definition
     |   └── pages/                  # 페이지 디렉토리
-    |   |   ├── NotFound/           # notfound page 
+    |   |   ├── NotFound/           # notfound page
     |   |   ├── index.tsx/          # navbar, outlet 구조설정
     |   |   └── ...                 # 기타 페이지들
     |   └── store /                 # 리덕스 스토어

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { logIn } from 'store/modules/auth';
+import { logIn } from 'store/auth/actions';
 import LogIn from 'components/common/LogIn';
 
 const LoginPage = () => {
