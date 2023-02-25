@@ -32,8 +32,11 @@ const Navbar = () => {
         <Link to='/' className='logo'>
           <span className='font-brand'>Kurly </span> Clone Admin
         </Link>
-        <Divider style={{ marginTop: '40px' }} />
-        <List>
+        <Box style={{ marginTop: '20px' }}>
+          <Auth displayName={displayName} onLogOut={handleLogOut} />
+        </Box>
+        <Divider style={{ marginTop: '20px' }} />
+        <List sx={{ height: '100%' }}>
           <ListItem disablePadding>
             <ListItemButton href='/products/list'>
               <ListItemText primary='상품' sx={{ fontWeight: 700, fontSize: '2rem' }} />
@@ -47,7 +50,6 @@ const Navbar = () => {
           <Link to='/products/best'>베스트</Link>
           <Link to='/member/list'>회원</Link>
          <button>Kurly로 이동</button>  */}
-        <Auth displayName={displayName} onLogOut={handleLogOut} />
       </nav>
     </Box>
   );
