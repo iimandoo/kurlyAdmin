@@ -10,6 +10,7 @@
 - MaterialUI
 - Firebase
 - Cloudinary
+- Redux
 
 ## Directory Structure
 
@@ -22,6 +23,8 @@
     |   |   ├── NotFound/           # notfound page 
     |   |   ├── index.tsx/          # navbar, outlet 구조설정
     |   |   └── ...                 # 기타 페이지들
+    |   └── store /                 # 리덕스 스토어
+    |       └── modules/            # 리덕스 모듈
     ├── App.tsx                     # ReactQuery Provider 설정
     ├── AppRouter.tsx               # ReactRouter 라우팅 설정
     ├── firebaseRoot.tsx            # Firebase 기본 설정
