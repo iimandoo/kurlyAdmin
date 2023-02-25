@@ -1,4 +1,4 @@
-export type ProductsCreateForm = {
+export type ProductsCreateFormModel = {
   title: string;
   description: string;
   url: string;

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useForm, FormProvider } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { Button, Typography } from '@mui/material';
-import { useProductsCreateUpdateMutation } from 'api/products/create/useProductsCreateUpdateMethodMutation';
-import ProductsNewFormCreate from 'components/products/new/form/create';
-import ProductsNewFormImgUploader from 'components/products/new/form/ImgUploader';
-import { ProductsCreateForm } from 'models/products/ProductsCreateForm';
+import { useProductsCreateMutation } from 'api/products/create/useProductsCreateMethodMutation';
+import ProductsNewFormCreate from 'components/products/new/create';
+import ProductsNewFormImgUploader from 'components/products/new/ImgUploader';
+import { ProductsCreateFormModel } from 'models/products/ProductsCreateFormModel';
 import FixedCenterWrapper from 'components/common/FixedCenterWrapper';
 import Dialog from 'components/common/Dialog';
 import PageWrapper from 'components/common/PageWrapper';
@@ -19,13 +19,13 @@ const ProductsNewPage = () => {
   const onUploaded = (url: string) => {
     setUploadedUrl(url);
   };
-  const methods = useForm<ProductsCreateForm>();
+  const methods = useForm<ProductsCreateFormModel>();
 
-  const { mutateAsync: mutateAdminProductsCreateUpdate } = useProductsCreateUpdateMutation();
+  const { mutateAsync: mutateAdminProductsCreate } = useProductsCreateMutation();
 
-  const onSubmit = async (formData: ProductsCreateForm) => {
+  const onSubmit = async (formData: ProductsCreateFormModel) => {
     try {
-      await mutateAdminProductsCreateUpdate(formData);
+      await mutateAdminProductsCreate(formData);
       await setDialog({ isOpen: true, message: '등록하였습니다.' });
       navigate('/products/list');
     } catch (e) {
