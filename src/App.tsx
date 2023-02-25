@@ -5,7 +5,7 @@ import AppRouter from 'AppRouter';
 import './App.css';
 import { useSelector } from 'react-redux';
 import { RootState } from 'store/modules';
-import LogIn from './pages/login';
+import LoginPage from './pages/login';
 
 const queryClient = new QueryClient();
 
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      {displayName ? <AppRouter /> : <LogIn />}
+      {displayName ? <AppRouter /> : <LoginPage />}
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
   );
