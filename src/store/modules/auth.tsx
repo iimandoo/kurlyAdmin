@@ -21,6 +21,7 @@ export default function auth(state: USERSTATE = initialState, action: AuthAction
     case LOGIN:
     case LOGOUT:
       return {
+        ...state,
         displayName: action.payload,
       };
     default:

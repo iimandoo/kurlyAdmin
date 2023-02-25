@@ -16,7 +16,7 @@ const Navbar = () => {
   const displayName = useSelector((state: RootState) => state.auth.displayName);
   const dispatch = useDispatch();
 
-  const onLogOut = (displayName: string) => {
+  const handleLogOut = (displayName: string) => {
     dispatch(logOut(displayName));
   };
 
@@ -47,8 +47,7 @@ const Navbar = () => {
           <Link to='/products/best'>베스트</Link>
           <Link to='/member/list'>회원</Link>
          <button>Kurly로 이동</button>  */}
-        {/* <button onClick={handleLogIn}>로그인</button> */}
-        <Auth displayName={displayName} onLogOut={onLogOut} />
+        <Auth displayName={displayName} onLogOut={handleLogOut} />
       </nav>
     </Box>
   );
