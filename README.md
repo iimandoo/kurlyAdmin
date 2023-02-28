@@ -34,12 +34,10 @@
     └── ...
 
 ## UI
-### login
-    <img src="https://user-images.githubusercontent.com/77284671/221918173-454775f4-78bb-484c-afa1-da849d952788.png" />
-    ![c1](https://user-images.githubusercontent.com/77284671/221918173-454775f4-78bb-484c-afa1-da849d952788.png)
-### products list
-    ![c2](https://user-images.githubusercontent.com/77284671/221918244-901b87e6-49a0-4a62-b2bb-2a78d9c28b0e.png)
-### product create
-    ![c3](https://user-images.githubusercontent.com/77284671/221918383-ff017820-87a9-4280-ab9e-31212fff73ac.png)
+
+|login|products list|product create|
+|------|---|---|
+|![c1](https://user-images.githubusercontent.com/77284671/221919062-7636e24f-dc9e-451d-b83d-44ee1d4daa86.png)|![c2](https://user-images.githubusercontent.com/77284671/221919208-53616bf1-1fd3-4c64-9cba-1d5448078cd0.png)|![c3](https://user-images.githubusercontent.com/77284671/221919243-eb5e5cc0-82f5-4c2f-bd8d-331b8fc211ed.png)
+
 
 
